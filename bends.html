@@ -245,6 +245,40 @@
             </div>
         </div>
 
-        <!-- FOOTER: DATA RECORDING -->
+        <! -- FOOTER: DATA RECORDING -->
         <div class="footer-section">
             <div class="date-input-group">
+                <label for="completion-date">Date Completed:</label>
+                <input type="date" id="completion-date">
+            </div>
+        </div>
+
+    </div> <!-- Closes the competency-card -->
+
+    <script>
+        // This acts as a digital memory so your checkmarks stay saved when you refresh
+        document.addEventListener("DOMContentLoaded", () => {
+            const inputs = document.querySelectorAll('input[type="checkbox"], input[type="date"]');
+
+            inputs.forEach((input, index) => {
+                const savedValue = localStorage.getItem('motorcycle_progress_' + index);
+                
+                if (input.type === 'checkbox') {
+                    input.checked = savedValue === 'true';
+                } else if (input.type === 'date') {
+                    input.value = savedValue || '';
+                }
+
+                input.addEventListener('change', () => {
+                    if (input.type === 'checkbox') {
+                        localStorage.setItem('motorcycle_progress_' + index, input.checked);
+                    } else if (input.type === 'date') {
+                        localStorage.setItem('motorcycle_progress_' + index, input.value);
+                    }
+                });
+            });
+        });
+    </script>
+
+</body>
+</html>
