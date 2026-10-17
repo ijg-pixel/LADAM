@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Motorcycle Training Progress Tracker</title>
+    <style>
+        /* Base page styling */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f4f6f9;
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+        }
+
+        /* Container for the competency sheet */
+        .competency-card {
+            background-color: #ffffff;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+            max-width: 700px;
+            width: 100%;
+            padding: 30px;
+            border-top: 8px solid #0056b3; /* Professional blue accent accent bar */
+        }
+
+        /* Header titles styling */
+        h1 {
+            color: #1a202c;
+            margin-top: 0;
+            font-size: 24px;
+        }
+
+        .subtitle {
+            color: #718096;
+            font-size: 14px;
+            margin-bottom: 25px;
+            line-height: 1.5;
+        }
+
+        /* Layout for each checklist item row */
+        .competency-row {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 12px 0;
+            border-bottom: 1px solid #edf2f7;
+        }
+
+        /* Category labels (Information, Position, Speed, etc.) */
+        .category-header {
+            background-color: #ebf8ff;
+            color: #2b6cb0;
+            font-weight: bold;
+            padding: 8px 12px;
+            margin-top: 20px;
+            border-radius: 6px;
+            font-size: 14px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        /* Text descriptions of the riding skills */
+        .skill-text {
+            color: #4a5568;
+            font-size: 14px;
+            padding-right: 15px;
+            flex-grow: 1;
+        }
+
+        /* Group wrapper for the 1st, 2nd, 3rd checkboxes */
+        .progress-group {
+            display: flex;
+            gap: 15px;
+        }
+
+        /* Aligning label text with checkboxes inside columns */
+        .checkbox-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            font-size: 11px;
+            color: #a0aec0;
+        }
+
+        .checkbox-container input {
+            cursor: pointer;
+            width: 18px;
+            height: 18px;
+            margin-bottom: 4px;
+            accent-color: #2b6cb0; /* Changes checkmark color to blue */
+        }
+
+        /* Bottom section styling for completion dates */
+        .footer-section {
+            margin-top: 30px;
+            padding-top: 20px;
+            border-top: 2px solid #edf2f7;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+
+        .date-input-group {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .date-input-group label {
+            font-weight: 600;
+            font-size: 14px;
+            color: #4a5568;
+        }
+
+        .date-input-group input {
+            padding: 8px 12px;
+            border: 1px solid #cbd5e0;
+            border-radius: 6px;
+            font-family: inherit;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="competency-card">
+        <h1>Competency Sheet: Bends</h1>
+        <p class="subtitle">To be an advanced rider, these are the competencies that you should be able to demonstrate. Consider how confident you feel with each. You can grade three of your rides to record your progress through the course.</p>
+
+        <!-- INFORMATION CATEGORY -->
+        <div class="category-header">Information</div>
+        
+        <div class="competency-row">
+            <span class="skill-text">Actively scan the road to the limit point in the distance and back.</span>
+            <div class="progress-group">
+                <div class="checkbox-container"><input type="checkbox"><span>1st</span></div>
+                <div class="checkbox-container"><input type="checkbox"><span>2nd</span></div>
+                <div class="checkbox-container"><input type="checkbox"><span>3rd</span></div>
+            </div>
+        </div>
+
+        <div class="competency-row">
+            <span class="skill-text">Build awareness of other road users' position and activity.</span>
+            <div class="progress-group">
+                <div class="checkbox-container"><input type="checkbox"><span>1st</span></div>
+                <div class="checkbox-container"><input type="checkbox"><span>2nd</span></div>
+                <div class="checkbox-container"><input type="checkbox"><span>3rd</span></div>
+            </div>
+        </div>
+
+        <!-- POSITION CATEGORY -->
+        <div class="category-header">Position</div>
+
+        <div class="competency-row">
+            <span class="skill-text">Position correctly on the approach to a bend.</span>
+            <div class="progress-group">
+                <div class="checkbox-container"><input type="checkbox"><span>1st</span></div>
+                <div class="checkbox-container"><input type="checkbox"><span>2nd</span></div>
+                <div class="checkbox-container"><input type="checkbox"><span>3rd</span></div>
+            </div>
+        </div>
+
+        <div class="competency-row">
+            <span class="skill-text">In a right-hand bend – towards the nearside.</span>
+            <div class="progress-group">
+                <div class="checkbox-container"><input type="checkbox"><span>1st</span></div>
+                <div class="checkbox-container"><input type="checkbox"><span>2nd</span></div>
+                <div class="checkbox-container"><input type="checkbox"><span>3rd</span></div>
+            </div>
+        </div>
+
+        <div class="competency-row">
+            <span class="skill-text">In a left-hand bend – towards the offside of lane.</span>
+            <div class="progress-group">
+                <div class="checkbox-container"><input type="checkbox"><span>1st</span></div>
+                <div class="checkbox-container"><input type="checkbox"><span>2nd</span></div>
+                <div class="checkbox-container"><input type="checkbox"><span>3rd</span></div>
+            </div>
+        </div>
+
+        <div class="competency-row">
+            <span class="skill-text">Position correctly throughout the bend without compromising safety.</span>
+            <div class="progress-group">
+                <div class="checkbox-container"><input type="checkbox"><span>1st</span></div>
+                <div class="checkbox-container"><input type="checkbox"><span>2nd</span></div>
+                <div class="checkbox-container"><input type="checkbox"><span>3rd</span></div>
+            </div>
+        </div>
+
+        <!-- SPEED CATEGORY -->
+        <div class="category-header">Speed</div>
+
+        <div class="competency-row">
+            <span class="skill-text">Use the limit points correctly and be able to stop within the distance seen to be clear on your own side of the road.</span>
+            <div class="progress-group">
+                <div class="checkbox-container"><input type="checkbox"><span>1st</span></div>
+                <div class="checkbox-container"><input type="checkbox"><span>2nd</span></div>
+                <div class="checkbox-container"><input type="checkbox"><span>3rd</span></div>
+            </div>
+        </div>
+
+        <div class="competency-row">
+            <span class="skill-text">Use appropriate speed to negotiate the bend safely.</span>
+            <div class="progress-group">
+                <div class="checkbox-container"><input type="checkbox"><span>1st</span></div>
+                <div class="checkbox-container"><input type="checkbox"><span>2nd</span></div>
+                <div class="checkbox-container"><input type="checkbox"><span>3rd</span></div>
+            </div>
+        </div>
+
+        <!-- GEAR CATEGORY -->
+        <div class="category-header">Gear</div>
+
+        <div class="competency-row">
+            <span class="skill-text">Select and engage the appropriate gear for the speed and circumstances.</span>
+            <div class="progress-group">
+                <div class="checkbox-container"><input type="checkbox"><span>1st</span></div>
+                <div class="checkbox-container"><input type="checkbox"><span>2nd</span></div>
+                <div class="checkbox-container"><input type="checkbox"><span>3rd</span></div>
+            </div>
+        </div>
+
+        <!-- ACCELERATION CATEGORY -->
+        <div class="category-header">Acceleration</div>
+
+        <div class="competency-row">
+            <span class="skill-text">Maintain appropriate throttle application to retain stability.</span>
+            <div class="progress-group">
+                <div class="checkbox-container"><input type="checkbox"><span>1st</span></div>
+                <div class="checkbox-container"><input type="checkbox"><span>2nd</span></div>
+                <div class="checkbox-container"><input type="checkbox"><span>3rd</span></div>
+            </div>
+        </div>
+
+        <div class="competency-row">
+            <span class="skill-text">Accelerate to an appropriate speed in relation to hazards.</span>
+            <div class="progress-group">
+                <div class="checkbox-container"><input type="checkbox"><span>1st</span></div>
+                <div class="checkbox-container"><input type="checkbox"><span>2nd</span></div>
+                <div class="checkbox-container"><input type="checkbox"><span>3rd</span></div>
+            </div>
+        </div>
+
+        <!-- FOOTER: DATA RECORDING -->
+        <div class="footer-section">
+            <div class="date-input-group">
